@@ -1,22 +1,27 @@
 //navigacija
-var arrayHref = ["index.html", "products.html", "contact.html", "autor.html"];
-var arrayName = ["Home", "Product", "Contact", "Autor"];
+var linkovi = [
+    {name:"Home",      href:"index.html"},
+    {name:"Products",  href:"products.html"},
+    {name:"Contact Us",href:"contact.html"},
+    {name:"Author",    href:"author.html"}
+];
 
 var divNav = document.querySelector(".main-nav");
 var divNavMobile = document.querySelector(".mobile-nav");
 var navContent = `<ul class="main-nav__items">`;
 var navContentMobile = `<ul class="mobile-nav__items">`;
 
-for(let i = 0 ; i<arrayHref.length; i++){
+linkovi.forEach(link =>{
     navContent += `<li class="main-nav__item">
-                    <a href="${arrayHref[i]}">${arrayName[i]}</a>
+                    <a href="${link.href}">${link.name}</a>
                     </li>`;
     navContentMobile += `<li class="mobile-nav__item">
-                    <a href="${arrayHref[i]}">${arrayName[i]}</a>
+                    <a href="${link.href}">${link.name}</a>
                     </li>`;
-}
+})
 
 navContent += "</ul>";
+navContentMobile += "</ul>";
 divNav.innerHTML = navContent;
 divNavMobile.innerHTML = navContentMobile;
 
