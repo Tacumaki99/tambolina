@@ -2,27 +2,27 @@ main {
     padding-top: 3rem;
 }
 
-.testimonial {
+.author {
     font-size: 1.2rem;
 }
 
-.testimonial__image-container {
+.author__image-container {
     width: 100%;
     max-width: 40rem;
     box-shadow: 3px 3px 5px 3px rgba(0,0,0,0.3),3px;
 }
 
-.testimonial__image {
+.author__image {
     width: 100%;
     vertical-align: top;
 }
 
-.testimonial__info {
+.author__info {
     text-align: right;
     padding: 0.9rem;
 }
 
-#customer-2.testimonial {
+#customer-2.author {
     text-align: right;
 }
 
