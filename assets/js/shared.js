@@ -1,7 +1,7 @@
 //navigacija
 var linkovi = [
     {name:"Home",      href:"index.html"},
-    {name:"Gallery",  href:"Gallery.html"},
+    {name:"Gallery",  href:"gallery.html"},
     {name:"Contact Us",href:"contact.html"},
     {name:"Author",    href:"author.html"}
 ];
