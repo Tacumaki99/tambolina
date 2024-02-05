@@ -22,13 +22,7 @@ main {
     padding: 0.9rem;
 }
 
-#customer-2.author {
-    text-align: right;
-}
 
-#customer-2 .testimonial__info {
-    text-align: left;
-}
 
 .author__name {
     margin: 0.2rem;
