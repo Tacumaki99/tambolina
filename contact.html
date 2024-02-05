@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web1</title>
-    <link rel="shortcut icon" href="favicon.png">
+    <link rel="shortcut icon" href="assets/img/tambolina_logo.png">
     <link rel="stylesheet" href="assets/css/shared.css">
     <link rel="stylesheet" href="assets/css/contact.css">
-    <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
 <div class="backdrop"></div>
@@ -39,96 +38,80 @@
 <!--mobile navigation-->
 <nav class="mobile-nav">
 </nav>
-<main class="signup-page">
-    <h1 class="signup-title">CONTACT US</h1>
-<!--    <form action="index.html" class="signup-form">
-        <label for="first-name">First name</label>
-        <input type="text" id="first-name">
-        <label for="last-name">Last name</label>
-        <input type="text" id="last-name">
-        <label for="email">E-Mail</label>
-        <input type="email" id="email">
-        <label for="message">Message</label>
-        <input type="text" id="message">
-        <div class="signup-form__checkbox">
-            <input type="checkbox" id="agree-terms" required>
-            <label for="agree-terms">Agree to
-                <a href="#">Terms &amp; Conditions</a>
-            </label>
-        </div>
-        <button type="submit" class="button">Sign Up</button>
-    </form>
--->
-    <form action="index.html" class="contact-form" method="post">
-        <div class="form-row">
-            <div>
-                <label for="firstName">First name</label>
-                <input type="text" id="firstName" />
-            </div>
-            <span
-                    class="form-err"
-                    role="alert"
-                    id="firstNameErr"
-                    aria-hidden="true"
-            >
+<main class="contact-page">
+    <section id="contact" class="contact_form-section ">
+        <h1 id="contact-title" class="section-parts_title">Contact</h1>
+        <form action="contact.html" class="contact-form" method="post">
+            <div class="form-row">
+                <div>
+                    <label for="firstName">First name</label>
+                    <input type="text" id="firstName" />
+                </div>
+                <span
+                        class="form-err"
+                        role="alert"
+                        id="firstNameErr"
+                        aria-hidden="true"
+                >
               This field is required
             </span>
-        </div>
-        <div class="form-row">
-            <div>
-                <label for="lastName">Last name</label>
-                <input type="text" id="lastName" />
             </div>
-            <span
-                    class="form-err"
-                    role="alert"
-                    id="lastNameErr"
-                    aria-hidden="true"
-            >
+            <div class="form-row">
+                <div>
+                    <label for="lastName">Last name</label>
+                    <input type="text" id="lastName" />
+                </div>
+                <span
+                        class="form-err"
+                        role="alert"
+                        id="lastNameErr"
+                        aria-hidden="true"
+                >
               This field is required
             </span>
-        </div>
-        <div class="form-row">
-            <div>
-                <label for="email">E-Mail</label>
-                <input type="email" id="email" />
             </div>
-            <span
-                    class="form-err"
-                    role="alert"
-                    id="emailErr"
-                    aria-hidden="true"
-            >
+            <div class="form-row">
+                <div>
+                    <label for="email">E-Mail</label>
+                    <input type="email" id="email" />
+                </div>
+                <span
+                        class="form-err"
+                        role="alert"
+                        id="emailErr"
+                        aria-hidden="true"
+                >
               This field is required
             </span>
-            <span
-                    class="form-err"
-                    role="alert"
-                    id="emailErrValid"
-                    aria-hidden="true"
-            >
+                <span
+                        class="form-err"
+                        role="alert"
+                        id="emailErrValid"
+                        aria-hidden="true"
+                >
               Please enter a valid email address
             </span>
-        </div>
-        <div class="signup-form__checkbox form-row">
-            <div>
-                <input type="checkbox" id="agreeTerms" />
-                <label for="agreeTerms"
-                >Agree to
-                    <a href="#">Terms &amp; Conditions</a>
-                </label>
             </div>
-            <span
-                    class="form-err"
-                    role="alert"
-                    id="agreeTermsErr"
-                    aria-hidden="true"
-            >
+            <div class="signup-form__checkbox form-row">
+                <div>
+                    <input type="checkbox" id="agreeTerms" />
+                    <label for="agreeTerms"
+                    >Agree to
+                        <a href="#">Terms &amp; Conditions</a>
+                    </label>
+                </div>
+                <span
+                        class="form-err"
+                        role="alert"
+                        id="agreeTermsErr"
+                        aria-hidden="true"
+                >
               You must agree to terms and conditions to proceed.
             </span>
-        </div>
-        <button id="submit" type="submit" class="button">Submit</button>
-    </form>
+            </div>
+            <button id="submit" type="submit" class="button">Submit</button>
+        </form>
+    </section>
 </main>
 <!--footer-->
 <footer class="main-footer">
@@ -143,6 +126,7 @@
         </ul>
     </nav>
 </footer>
-<script type="text/javascript" src="shared.js"></script>
+<script type="text/javascript" src="assets/js/shared.js"></script>
+<script type="text/javascript" src="assets/js/contact.js"></script>
 </body>
 </html>

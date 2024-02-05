@@ -1,77 +1,425 @@
-main {
-    padding-top: 1rem;
+@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+
+*{
+    box-sizing: border-box;
 }
 
-.signup-title {
-    text-align: center;
-    font-size: 1.8rem;
-    color: #033311;
+
+
+html{
+    height: 100%;
+
 }
 
-.signup-form {
-    padding: 1rem;
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
     display: grid;
+    grid-template-rows: 3.5rem auto fit-content(8rem);
+    grid-template-areas: "header" "main" "footer";
+    height: 100%;
+}
+
+.backdrop{
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background: #211515;
+    opacity: 0.5;
+}
+
+#main-header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #211515;
+    padding: 0.5rem 1rem;
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.toggle-button{
+    width: 3rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding-top: 0;
+    padding-bottom: 0;
+    vertical-align: middle;
+}
+
+.toggle-button:focus{
+    outline: none;
+}
+
+.toggle-button__bar{
+    width: 100%;
+    height: 0.2rem;
+    background: #A2ADC0;
+    display: block;
+    margin: 0.6rem 0;
+}
+
+.main-header__brand{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-header__brand img{
+    height: 2.5rem;
+    vertical-align: middle;
+}
+
+.main-nav{
+    display: none;
+}
+
+.main-nav__items{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: end;
+}
+
+.main-nav__item{
+    margin: 0 1rem;
+}
+
+.main-nav__item a,
+.mobile-nav__item a{
+    text-decoration: none;
+    color: #A2ADC0;
+    font-weight: bold;
+    padding: 0.2rem 0;
+}
+
+.main-nav__item a:hover,
+.main-nav__item a:active{
+    color: #7c8594;
+    border-bottom: 5px solid #7c8594;
+}
+
+.mobile-nav{
+    display: none;
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    background: #211515;
+    width: 80%;
+    height: 100vh;
+}
+
+.mobile-nav__items{
+    width: 90%;
+    height: 100%;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-nav__item{
+    margin: 1rem 0;
+}
+
+.mobile-nav__item a{
+    font-size: 1.5rem;
+}
+
+.open{
+    display: block !important;
+}
+
+.main-footer{
+    background: black;
+    padding: 2rem;
+    grid-area: footer;
+}
+
+.main-footer__links{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-footer__link{
+    margin: 0.5rem 0;
+    color: white;
+}
+
+.main-footer__link a{
+    color: white;
+    text-decoration: none;
+}
+
+.main-footer__link a:hover,
+.main-footer__link a:active{
+    color: #ccc;
+}
+
+main{
+    grid-area: main;
+    background-color: #211515;
+    display: grid;
+    grid-template-rows: [overview] auto [gallery] auto [discography] auto [contact] auto [author] auto;
+    grid-row-gap:2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#overview{
+    background: url("img/dizzy_gillespie-mainpage.jpg") left/cover no-repeat border-box;
+    width: 100%;
+    height: 33vh;
+    position: relative;
+    grid-area: overview;
+}
+
+.quotes-slider{
+    position: absolute;
+    top: 4.8rem;
+    right: 3%;
+    color: white;
+    width: 35%;
+    text-align: center;
+}
+
+#overview h1{
+    color: white;
+    font-family: "Anton", sans-serif;
+    position: absolute;
+    bottom: 5%;
+    right: 3%;
+    font-size: 1.6rem;
+}
+
+.section-parts_title {
+    color: #A2ADC0;
+    text-align: center;
+}
+
+#gallery{
+    grid-area: gallery;
+    margin: auto;
+    background-color: #006c67;
+}
+
+.gallery_items_container{
+    display: flex;
+    margin: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.gallery_items__img{
+    height: 10rem;
+    margin: 0.5rem 0;
+}
+
+#discography{
+    grid-area: discography;
+    margin: auto;
+    background-color: #006c67;
+}
+
+.discography_items_container{
+    display: flex;
+    margin: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.discography_item{
+    color: white;
+}
+
+#contact{
+    grid-area: contact;
+    background-color: #333333;
+}
+
+#author{
+    grid-area: author;
+}
+
+.contact-form{
+    padding: 1rem;
+    display: block;
     grid-auto-rows: 2rem;
     grid-row-gap: 0.5rem;
 }
 
-.signup-form label,
-.signup-form input,
-.signup-form select {
+.contact-form div:nth-child(1){
+    flex: 1;
+}
+
+.contact-form label{
+    font-weight: bold;
+    color: white;
+}
+
+.contact-form label,
+.contact-form input,
+.contact-form select{
     display: block;
     width: 100%;
 }
 
-/*.singup-form input[type="checkbox"]*/
-.signup-form input[id*="terms"],
-.signup-form input[id*="terms"] + label {
+.contact-form input[id*="terms"],
+.contact-form input[id*="terms"] + label{
     display: inline-block;
     width: auto;
     vertical-align: bottom;
 }
 
-.signup-form input:not([type="checkbox"]),
-.signup-form select {
-    border: 1px solid #ccc;
+.contact-form input:not([type="checkbox"]),
+.conatct-form select{
+    border: 1px solid #A2ADC0;
     padding: 0.2rem 0.5rem;
     font: inherit;
 }
 
-.signup-form input:focus,
-.signup-form select:focus {
+.contact-form input:focus,
+.contact-form select:focus{
     outline: none;
-    background: #d8f3df;
-    border-color: #2ddf5c;
+    background: #A2ADC0;
+    border-color: #A2ADC0;
 }
 
-.signup-form input[type="checkbox"] {
-    border: 1px solid #ccc;
+.contact-form input[type="checkbox"]{
+    border: 1px solid #A2ADC0;
     background: white;
-    height: 1rem;
     width: 1rem;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    height: 1rem;
     appearance: none;
 }
 
-.signup-form input[type="checkbox"]:checked {
-    background: #2ddf5c;
-    border: #0e4f1f;
+.contact-form input[type="checkbox"]:checked{
+    background: #66a182;
+    border: #66a182;
 }
 
-.signup-form input.invalid,
-.signup-form select.invalid,
-.signup-form :invalid {
-    border-color: #033311 !important;
+.contact-form_invalid,
+.contact-form_invalid ,
+.contact-form_invalid {
+    border-color: red !important;
     background: #faacac;
 }
 
-.signup-form button[type="submit"] {
+.contact-form button[type="submit"]{
     display: block;
 }
 
+#author{
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+.author_img {
+    grid-row-start:2;
+    grid-row-end: 3;
+    margin: 2rem;
+    width: 13rem;
+    justify-self: center;
+}
+
+.author_text{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    text-align: center;
+    color: #A2ADC0;
+}
+
+@media(min-width:40rem){
+    .main-nav{
+        display: flex;
+    }
+
+    .toggle-button {
+        display: none;
+    }
+}
+
+@media (min-width: 40rem) and (min-height: 40rem) {
+    #overview {
+        height: 40vh;
+        background-position: 25% 25%;
+    }
+
+    .quotes-slider  {
+        position: absolute;
+        top: 25%;
+        right: 3%;
+        width: 25%;
+    }
+
+    #overview h1 {
+        font-size: 3rem;
+    }
+}
+
 @media (min-width: 40rem) {
-    .signup-form {
+    .main-footer__link {
+        margin: 0 1rem;
+    }
+
+    .main-footer__links {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 40rem){
+    #gallery{
+        border-radius: 20px;
+        width: 95%;
+    }
+
+    .gallery_items__img{
+        height: 20rem;
+        margin: 0.5rem 0;
+    }
+}
+
+@media(min-width: 40rem){
+    #discography{
+        border-radius: 20px;
+        width: 95%;
+    }
+
+    .discography_items_container{
+        display: flex;
+        margin: 1rem;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 40rem) {
+    .contact-form {
         margin: auto;
         width: 30rem;
         grid-template-columns: 10rem auto;
@@ -79,11 +427,69 @@ main {
         grid-column-gap: 0.5rem;
     }
 
-    .signup-form [id="title"] {
+    .contact-form [id="title"] {
         grid-column: span 2;
     }
 
-    .signup-form__checkbox {
+    .contact-form__checkbox {
         grid-column: span 2;
     }
+}
+
+@media (min-width: 40rem){
+    #author{
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 6rem auto;
+        width: 60%;
+    }
+
+    #author_title{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .author_img {
+        box-shadow:-8px -8px #777777;
+    }
+
+    .author_text{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+}
+
+.form-err{
+    display: none;
+    font-size: 0.8em;
+}
+
+input.invalid{
+    border-color: red !important;
+}
+
+.form-err.visible{
+    display: block;
+    color: red;
+}
+
+#firstNameErr {
+    display: none;
+    font-size: 0.8em;
+}
+
+#firstNameErr.visible {
+    display: block;
+}
+
+.form-row{
+    display: block;
+    margin: 10px;
+}
+
+.form-row > div{
+    display: flex;
 }
