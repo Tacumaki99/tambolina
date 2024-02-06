@@ -16,7 +16,7 @@ main {
 .mySlides:first-child{
     display: block;
 }
-s
+
 .prev, .next {
     cursor: pointer;
     position: absolute;
