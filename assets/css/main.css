@@ -101,16 +101,7 @@ main {
     font-size: 3rem;
 }
 
-.home__subtitle {
-    margin: 0;
-    font-size: 1.1rem;
-    color: #ccc;
-}
 
-.home__subtitle a:hover,
-.home__subtitle a:active {
-    color: #7a7a7a;
-}
 
 .home__text {
     margin: 0.2rem;
