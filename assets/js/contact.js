@@ -63,6 +63,8 @@ function validateForm(e) {
         email.classList.add('invalid');
         emailErrValid.setAttribute('aria-hidden', false);
         email.setAttribute('aria-invalid', true);
+        emailErr.classList.remove('visible');
+        email.classList.remove('invalid');
     }
     else {
         emailErrValid.classList.remove('visible');
